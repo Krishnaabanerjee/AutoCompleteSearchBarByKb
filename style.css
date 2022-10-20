@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blueviolet;
+    padding: 0 20px;
+}
+.wrapper{
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+}
+.wrapper .search-input{
+    width: 100%;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.search-input input{
+    height: 55px;
+    width: 80%;
+    outline: none;
+    padding: 0 60px 0 20px ;
+    font-size: 20px;
+    float: left;
+    background-color: aliceblue;
+    border: 0;
+    border-radius: 8px 0 0 8px;
+
+}
+.search-input button{
+    width: 20%;
+    height: 55px;
+    outline: none;
+    background-color: aliceblue;
+    font-size: 20px;
+    float: right;
+    align-items: flex-end;
+    border: 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.search-input .autobox{
+    /*padding: 10px 8px;*/
+    max-height: 280px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+.search-input.active .autobox{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.autobox li{
+    list-style-type: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 3px;
+    display: none;
+    color: aliceblue;
+    font-size: 30px;
+    
+}
+
+.autobox li:hover{
+    background-color: white;
+    color: blueviolet;
+}
+
+.search-input.active .autobox li{
+    display: block;
+}
